@@ -1,30 +1,65 @@
-# React + TypeScript + Vite
+# Desafio Woovi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esse projeto foi realizado com o intuito de completar o desafio de "Frontend Júnior da Woovi".
 
-Currently, two official plugins are available:
+## Descrição
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto consiste em realizar uma forma de pagamento para o cliente, tendo opções como Pix e Pix Parcelado. Segue design disponibilizado abaixo:
 
-## Expanding the ESLint configuration
+![Woovi Challenge](public/pix_challenge.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tecnologias Utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+-   React
+-   TypeScript
+-   Material UI
+-   Componentização
+-   **[Vite](https://vitejs.dev/guide/)**
+-   React-Hook-Form
+-   Hooks
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Instalação
+
+1. Clone o repositório:
+
+```
+git clone https://github.com/lucasmassarico/pix-challenge.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Navegue até o diretório
+
+```
+cd pix-challenge
+```
+
+3. Instale as dependências
+
+```
+npm i
+```
+
+4. Inicie o ambiente de desenvolvimento:
+
+```
+npm run dev
+```
+
+## Como usar
+
+Após iniciar o servidor, abra o navegador e acesse \_http://localhost:5173 para visualizar o projeto
+
+## Aprendizados
+
+Ao longo do projeto, tive algumas dificuldades que me proporcionaram vários aprendizados:
+
+-   Aprendi mais sobre a utilização da Material UI. Ao inciar o projeto, utilizei apenas CSS modular, mas depois, busquei entender melhor a biblioteca sugerida pela equipe da Woovi. Devido ao tempo limitado, não consegui criar os temas desejados, então tive que adaptar a biblioteca para atender às necessidades do projeto.
+
+-   Em relação ao TS, melhorar a organização de tipagens.
+
+## Contato
+
+Lucas Massarico
+
+-   lucasmassarico1@gmail.com
+-   [Linkedin](https://www.linkedin.com/in/lucasmassarico/)
+-   [Github](https://github.com/lucasmassarico)
