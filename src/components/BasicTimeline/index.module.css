@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    width: 90%;
+    margin-top: 2rem;
+}
+
+.customDot {
+    margin: 0 !important;
+}
+
+.timelineContent {
+    padding: 0.425rem 0 0.3rem 0.5rem !important;
+    margin: 0;
+    top: -0.9rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-family: Nunito, sans-serif !important;
+    font-weight: 600;
+    font-size: 1.125rem !important;
+    height: 2rem;
+}
+
+.timelineContentColumn {
+    flex: 1;
+}
+
+.secondColumn {
+    text-align: right;
+    font-weight: 800;
+    font-size: 1.125rem !important;
+    height: 2rem;
+    padding: 0 !important;
+}
+
+.customConnector {
+    height: 1rem; /* Ajuste o tamanho aqui */
+    margin: 0 !important; /* Remover margens */
+    padding: 0 !important; /* Remover preenchimento */
+
+    & .muitimelineconnector {
+        height: 2rem;
+    }
+}

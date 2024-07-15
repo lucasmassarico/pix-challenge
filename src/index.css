@@ -1,0 +1,16 @@
+:root {
+    font-family: Nunito, sans-serif;
+    font-size: 16px;
+
+    background-color: #ffffff;
+    
+    color: #4d4d4d;
+
+    margin: 0;
+    padding: 0;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

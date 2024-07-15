@@ -1,0 +1,92 @@
+.inputMethod {
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    font-weight: 600;
+
+    border: 0.125rem solid #e5e5e5;
+    box-sizing: border-box;
+
+    position: relative;
+    margin: 0;
+}
+
+.checked {
+    background-color: #f4fbf9;
+    border-color: #03d69d;
+}
+
+.customRadio {
+    margin-right: 1rem;
+}
+
+.radioInput {
+    display: none;
+}
+
+.inputContent p {
+    margin: 0;
+}
+
+.inputContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.customRadio {
+    position: absolute;
+    top: 0.25rem;
+    right: -0.75rem;
+}
+.paymentValue {
+    font-size: 1.5rem;
+}
+
+.cashback {
+    color: #03d69d;
+    font-size: 1rem;
+}
+
+.totalValue {
+    color: #afafaf;
+    font-size: 1rem;
+}
+
+.specialLine {
+    position: relative;
+    margin-top: 0.5rem;
+    width: 95%;
+    line-height: 2rem;
+    background: url("../../assets/blue_tape.svg") no-repeat center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: start;
+    padding-left: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.inputMethod:first-child {
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+}
+
+.inputMethod:not(:first-child) {
+    border-top: 0;
+}
+
+.inputMethod:last-child {
+    border-bottom-left-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+}
+.inputMethod.checked {
+    border-top: 0.125rem solid #03d69d;
+}

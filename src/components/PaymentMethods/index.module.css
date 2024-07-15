@@ -1,0 +1,30 @@
+/* .container {
+    color: #4d4d4d;
+} */
+
+/* .logo {
+    padding-top: 2rem;
+} */
+
+.userNameIntro {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.radioInput {
+    display: none;
+}
+
+.radioInput:checked + .pixContent {
+    border-color: #03d69d; /* Altere a borda quando o input estiver selecionado */
+}
+
+.pixContent p {
+    margin: 0;
+}
+
+.pixContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

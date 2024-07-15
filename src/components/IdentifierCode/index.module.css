@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+}
+
+.container p {
+    margin: 0;
+}
+
+.message {
+    font-size: 0.875rem;
+    color: #b2b2b2;
+}
+
+.idMessage {
+    font-size: 0.875rem;
+
+    font-weight: 800;
+    color: #4d4d4d;
+}
