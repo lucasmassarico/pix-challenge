@@ -20,6 +20,8 @@ O projeto consiste em realizar uma forma de pagamento para o cliente, tendo opç
 
 ## Instalação
 
+Para rodar o projeto localmente, siga os passos abaixo:
+
 1. Clone o repositório:
 
 ```
