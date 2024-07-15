@@ -35,58 +35,60 @@ function App() {
 
     return (
         <>
-            <div>
-                <img src={wooviLogo} className="logo" alt="logo" />
+            <div className="appBody">
+                <div>
+                    <img src={wooviLogo} className="logo" alt="logo" />
+                </div>
+                {stagePayment === "paymentMethod" && (
+                    <>
+                        <motion.div
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            transition={{ duration: 0.25 }}
+                        >
+                            <PaymentMethods selectPaymentMethod={selectStage} />
+                        </motion.div>
+                    </>
+                )}
+
+                {stagePayment === "pixMethod" && (
+                    <>
+                        <motion.div
+                            initial={{ x: "100%" }}
+                            animate={{ x: 0 }}
+                            transition={{ duration: 0.25 }}
+                        >
+                            <PixPayment selectPaymentMethod={selectStage} />
+                        </motion.div>
+                    </>
+                )}
+
+                {stagePayment === "creditMethod" && (
+                    <>
+                        <motion.div
+                            initial={{ x: "100%" }}
+                            animate={{ x: 0 }}
+                            transition={{ duration: 0.25 }}
+                        >
+                            <CreditPayment selectPaymentMethod={selectStage} />
+                        </motion.div>
+                    </>
+                )}
+
+                {stagePayment === "done" && (
+                    <>
+                        <motion.div
+                            initial={{ x: "100%" }}
+                            animate={{ x: 0 }}
+                            transition={{ duration: 0.25 }}
+                        >
+                            <Done selectPaymentMethod={selectStage} />
+                        </motion.div>
+                    </>
+                )}
+
+                <Footer />
             </div>
-            {stagePayment === "paymentMethod" && (
-                <>
-                    <motion.div
-                        initial={{ y: "100%" }}
-                        animate={{ y: 0 }}
-                        transition={{ duration: 0.25 }}
-                    >
-                        <PaymentMethods selectPaymentMethod={selectStage} />
-                    </motion.div>
-                </>
-            )}
-
-            {stagePayment === "pixMethod" && (
-                <>
-                    <motion.div
-                        initial={{ x: "100%" }}
-                        animate={{ x: 0 }}
-                        transition={{ duration: 0.25 }}
-                    >
-                        <PixPayment selectPaymentMethod={selectStage} />
-                    </motion.div>
-                </>
-            )}
-
-            {stagePayment === "creditMethod" && (
-                <>
-                    <motion.div
-                        initial={{ x: "100%" }}
-                        animate={{ x: 0 }}
-                        transition={{ duration: 0.25 }}
-                    >
-                        <CreditPayment selectPaymentMethod={selectStage} />
-                    </motion.div>
-                </>
-            )}
-
-            {stagePayment === "done" && (
-                <>
-                    <motion.div
-                        initial={{ x: "100%" }}
-                        animate={{ x: 0 }}
-                        transition={{ duration: 0.25 }}
-                    >
-                        <Done selectPaymentMethod={selectStage} />
-                    </motion.div>
-                </>
-            )}
-
-            <Footer />
         </>
     );
 }
