@@ -461,6 +461,7 @@ export const CreditPayment = ({ selectPaymentMethod }: CreditPaymentProps) => {
             <div className={styles.container}>
                 <BasicTimeline
                     numberOfInstallments={numberOfInstallments}
+                    stage="creditMethod"
                 />
 
                 <Divider

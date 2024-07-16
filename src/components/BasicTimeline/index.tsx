@@ -4,6 +4,7 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 import { formatCurrency } from "../../utils";
 
@@ -12,10 +13,14 @@ import { usePaymentContext } from "../../hooks/usePaymentContext";
 
 interface BasicTimelineProps {
     numberOfInstallments: number;
+    stage?: string;
 }
 
 // Aprendi a utilizar MUI aqui, deveria ter usado em todo o projeto
-export const BasicTimeline = ({ numberOfInstallments }: BasicTimelineProps) => {
+export const BasicTimeline = ({
+    numberOfInstallments,
+    stage,
+}: BasicTimelineProps) => {
     const { pixPaymentValue, totalAmount } = usePaymentContext();
 
     const remainingValue = totalAmount - pixPaymentValue;
@@ -37,12 +42,25 @@ export const BasicTimeline = ({ numberOfInstallments }: BasicTimelineProps) => {
                     minHeight: "3rem",
                 }}
             >
-                <TimelineSeparator>
-                    <TimelineDot
-                        variant="outlined"
-                        className={styles.customDot}
-                        sx={{ borderColor: "#03D69D" }}
-                    />
+                <TimelineSeparator sx={{ fontSize: "medium" }}>
+                    {stage === "creditMethod" ? (
+                        <CheckCircleIcon
+                            sx={{
+                                fontSize: "1.1rem",
+                                color: "#03D69D",
+                            }}
+                        />
+                    ) : (
+                        <TimelineDot
+                            variant="outlined"
+                            className={styles.customDot}
+                            sx={{
+                                borderColor: "#03D69D",
+                                width: "0.2rem",
+                                height: "0.2rem",
+                            }}
+                        />
+                    )}
                     {numberOfInstallments > 1 && (
                         <TimelineConnector
                             sx={{
@@ -71,11 +89,18 @@ export const BasicTimeline = ({ numberOfInstallments }: BasicTimelineProps) => {
                         height: "1rem",
                     }}
                 >
-                    <TimelineSeparator>
+                    <TimelineSeparator sx={{ fontSize: "medium" }}>
                         <TimelineDot
                             variant="outlined"
                             className={styles.customDot}
-                            sx={{ borderColor: "#E5E5E5" }}
+                            sx={{
+                                width: "0.2rem",
+                                height: "0.2rem",
+                                borderColor:
+                                    stage === "creditMethod"
+                                        ? "#03D69D"
+                                        : "#E5E5E5",
+                            }}
                         />
                     </TimelineSeparator>
                     <TimelineContent className={styles.timelineContent}>

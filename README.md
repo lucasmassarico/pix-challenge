@@ -48,7 +48,7 @@ npm run dev
 
 ## Como usar
 
-Após iniciar o servidor, abra o navegador e acesse \_http://localhost:5173 para visualizar o projeto
+Após iniciar o servidor, abra o navegador e acesse http://localhost:5173 para visualizar o projeto
 
 ## Aprendizados
 
